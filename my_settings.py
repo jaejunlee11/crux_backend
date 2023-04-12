@@ -1,3 +1,4 @@
+# 재준 : django 프로젝트 생성 DB연결
 DATABASES = {
     'default' : {
         'ENGINE': 'django.db.backends.mysql',

@@ -76,6 +76,7 @@ WSGI_APPLICATION = 'crux_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# 재준 : django 프로젝트 생성 DB연결
 DATABASES = my_settings.DATABASES
 
 
