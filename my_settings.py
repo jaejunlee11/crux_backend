@@ -1,4 +1,5 @@
 # 재준 : django 프로젝트 생성 DB연결
+# 민재 : DB테이블 작성(MYSQL) 예정
 DATABASES = {
     'default' : {
         'ENGINE': 'django.db.backends.mysql',
