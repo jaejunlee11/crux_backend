@@ -26,14 +26,3 @@ def getTest(request):
     test=Test.objects.all()
     serializer = TestSerializer(test, many=True)
     return Response(serializer.data)
-
-# 재준 : db에 데이터를 넣는 것 테스트
-
-@api_view(['POST'])
-def postTest(request):
-    reqData = request.data
-    serializer = TestSerializer(data=reqData)
-    if serializer.is_valid():
-        serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
