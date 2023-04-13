@@ -4,7 +4,9 @@
 ## ER diagram final
 ### ![cruxER다이어그램](https://user-images.githubusercontent.com/72538151/231676088-2c73a9fe-d4b8-464c-a34a-8d64a78ff419.png)
 ## 테이블 명세서
-### [과제2-테이블 명세서.docx](https://github.com/jaejunlee11/crux_backend/files/11219074/2-.docx)
+### ![TABLE1](https://user-images.githubusercontent.com/130541881/231765601-8f8ea107-0fad-464a-8496-c8a2fcf18d09.PNG)
+### ![TABLE2](https://user-images.githubusercontent.com/130541881/231765606-5ad8e857-e77a-4b72-b614-de2974c5e7a5.PNG)
+
 ### 진행 상황
 #### data base er diagram complete
 ##### er 다이어그램 완성
