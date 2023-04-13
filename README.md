@@ -3,6 +3,8 @@
 ### db에서 데이터를 받아오고 해당 데이터를 api주소로 넘겨줄 예정
 ## ER diagram final
 ### ![cruxER다이어그램](https://user-images.githubusercontent.com/72538151/231676088-2c73a9fe-d4b8-464c-a34a-8d64a78ff419.png)
+## 테이블 명세서
+### [과제2-테이블 명세서.docx](https://github.com/jaejunlee11/crux_backend/files/11219074/2-.docx)
 ### 진행 상황
 #### data base er diagram complete
 ##### er 다이어그램 완성
