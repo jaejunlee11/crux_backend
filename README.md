@@ -3,10 +3,11 @@
 ### db에서 데이터를 받아오고 해당 데이터를 api주소로 넘겨줄 예정
 ## ER diagram final
 ### ![ERDIAGRAMTEST (1)](https://user-images.githubusercontent.com/130541881/232277096-08cf4e96-835f-446b-a9c4-aa787d0fd40c.png)
-### ![cruxER다이어그램](https://user-images.githubusercontent.com/72538151/231676088-2c73a9fe-d4b8-464c-a34a-8d64a78ff419.png)
+
 ## 테이블 명세서
-### ![TABLE1](https://user-images.githubusercontent.com/130541881/231765601-8f8ea107-0fad-464a-8496-c8a2fcf18d09.PNG)
-### ![TABLE2](https://user-images.githubusercontent.com/130541881/231765606-5ad8e857-e77a-4b72-b614-de2974c5e7a5.PNG)
+###![명세서_1](https://user-images.githubusercontent.com/130541881/232277995-4135e2c3-8e00-4bb9-b153-d91b7a5cf5ed.PNG)
+###![명세서_2](https://user-images.githubusercontent.com/130541881/232277998-f71b5f6d-d27f-4651-a854-3a0960b8364b.PNG)
+
 
 ### 진행 상황
 #### data base er diagram complete
