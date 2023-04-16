@@ -7,3 +7,8 @@ class TestSerializer(serializers.ModelSerializer):
         model = Test
         fields = '__all__'
         
+class ForumPostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ForumPosts
+        fields = '__all__'
+      

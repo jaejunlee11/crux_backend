@@ -12,6 +12,7 @@ urlpatterns = [
     # 숫자에 따라서 다른 값을 받고 싶은 경우 int:id로 path 정의 하기
     path("<int:id>",getDB),
     path("test/",getTest),
-     path('postTest/', postTest, name="postMember"),
+    path('postTest/', postTest, name="postMember"),
+    path("forumPost/",getForumPost),
 ]
 

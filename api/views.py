@@ -28,6 +28,12 @@ def getDB(request,id):
     serializer = TestSerializer(test, many=True)
     return Response(serializer.data)
 
+@api_view(['GET'])
+def getForumPost(request):
+    forumPost=ForumPosts.objects.all()
+    serializer = ForumPostSerializer(forumPost, many=True)
+    return Response(serializer.data)
+
 # 재준 : db에 데이터를 넣는 것 테스트 확인 완료
 # 해당 틀에 맞춰서 작성 해줘야함
 """
