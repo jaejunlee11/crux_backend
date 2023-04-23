@@ -50,3 +50,67 @@ def postTest(request):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+# 재준 : CruxClimbingspot 데이터 GET, POST
+@api_view(['GET'])
+def getSpot(request,id):
+    test=CruxClimbingspot.objects.filter(spotid=id)
+    serializer = CruxClimbingspotSerializer(test, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def postSpot(request):
+    reqData = request.data
+    serializer = CruxClimbingspotSerializer(data=reqData)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+# 재준 : CruxQuestion 데이터 GET, POST
+@api_view(['GET'])
+def getQuestion(request,id):
+    test=CruxQuestion.objects.filter(questionid=id)
+    serializer = CruxQuestionSerializer(test, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def postQuestion(request):
+    reqData = request.data
+    serializer = CruxQuestionSerializer(data=reqData)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+# 재준 : CruxSector 데이터 GET, POST
+@api_view(['GET'])
+def getSector(request,id):
+    test=CruxSector.objects.filter(sectornum=id)
+    serializer = CruxSectorSerializer(test, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def postSector(request):
+    reqData = request.data
+    serializer = CruxSectorSerializer(data=reqData)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+# 재준 : CruxVideo 데이터 GET, POST
+@api_view(['GET'])
+def getVideo(request,id):
+    test=CruxVideo.objects.filter(videoid=id)
+    serializer = CruxVideoSerializer(test, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def postVideo(request):
+    reqData = request.data
+    serializer = CruxVideoSerializer(data=reqData)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
