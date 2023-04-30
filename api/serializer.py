@@ -13,6 +13,11 @@ class CruxClimbingspotSerializer(serializers.ModelSerializer):
     class Meta:
         model = CruxClimbingspot
         fields = '__all__'
+        
+class SpotNameSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CruxClimbingspot
+        fields = ['spotname']
       
 class CruxQuestionSerializer(serializers.ModelSerializer):
     class Meta:

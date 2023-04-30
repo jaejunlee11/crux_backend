@@ -147,8 +147,8 @@ def postVideo(request):
 # 재준 :  CruxClimbingspot에서 클라이밍장 spotname데이터 GET
 @api_view(['GET'])
 def SpotName(request):
-    test=CruxClimbingspot.objects.filter(spotid=1).only("spotname")
-    serializer = CruxClimbingspotSerializer(test, many=True)
+    test=CruxClimbingspot.objects.filter(spotid=1)
+    serializer = SpotNameSerializer(test, many=True)
     return Response(serializer.data)
 
 
