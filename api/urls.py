@@ -27,5 +27,7 @@ urlpatterns = [
     # 재준 : CruxVideo
     path('GET/video/<int:id>',getVideo),
     path('POST/video/',postVideo,name='postVideo'),
+    # 재준 : SpotName가져오기
+    path('GET/spotName/',SpotName),
 ]
 

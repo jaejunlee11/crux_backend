@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework import status
 from .models import *
 from .serializer import *
-
+from django.db import connection
 
 # Create your views here.
 @api_view(['GET'])
@@ -58,6 +58,14 @@ def getSpot(request,id):
     serializer = CruxClimbingspotSerializer(test, many=True)
     return Response(serializer.data)
 
+# post 형식
+"""
+{
+    "spotid": 1,
+    "spotname": "jaejun",
+    "spotaddress": "볼더메이트"
+}
+"""
 @api_view(['POST'])
 def postSpot(request):
     reqData = request.data
@@ -74,6 +82,15 @@ def getQuestion(request,id):
     serializer = CruxQuestionSerializer(test, many=True)
     return Response(serializer.data)
 
+
+#post 형식
+"""
+{
+    "questionid": 1,
+    "difficulty": 3,
+    "questionimage": "(image.jpg)"
+}
+"""
 @api_view(['POST'])
 def postQuestion(request):
     reqData = request.data
@@ -90,6 +107,14 @@ def getSector(request,id):
     serializer = CruxSectorSerializer(test, many=True)
     return Response(serializer.data)
 
+# post 형식
+"""
+{
+    "sectornum": 1,
+    "sectorimage": "(image2.jpg)",
+    "locatespotid": 123
+}
+"""
 @api_view(['POST'])
 def postSector(request):
     reqData = request.data
@@ -105,7 +130,15 @@ def getVideo(request,id):
     test=CruxVideo.objects.filter(videoid=id)
     serializer = CruxVideoSerializer(test, many=True)
     return Response(serializer.data)
-
+# post 형태
+"""
+{
+    "videoid": 764543,
+    "uploaddate": "2023-04-14",
+    "videourl": "(youtube.com)",
+    "uploadmemid": "abcdefg"
+}
+"""
 @api_view(['POST'])
 def postVideo(request):
     reqData = request.data
@@ -114,3 +147,11 @@ def postVideo(request):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+# 재준 : 클라이밍장 검색 화면에서 등록된 클라이밍장을 전부 가져오는 함수
+# 재준 :  CruxClimbingspot에서 클라이밍장 spotname데이터 GET
+@api_view(['GET'])
+def SpotName(request):
+    test=CruxClimbingspot.objects.spotname
+    serializer = CruxClimbingspotSerializer(test, many=True)
+    return Response(serializer.data)
