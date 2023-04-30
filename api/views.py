@@ -28,12 +28,6 @@ def getDB(request,id):
     serializer = TestSerializer(test, many=True)
     return Response(serializer.data)
 
-@api_view(['GET'])
-def getForumPost(request):
-    forumPost=ForumPosts.objects.all()
-    serializer = ForumPostSerializer(forumPost, many=True)
-    return Response(serializer.data)
-
 # 재준 : db에 데이터를 넣는 것 테스트 확인 완료
 # 해당 틀에 맞춰서 작성 해줘야함
 """
@@ -147,11 +141,3 @@ def postVideo(request):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-# 재준 : 클라이밍장 검색 화면에서 등록된 클라이밍장을 전부 가져오는 함수
-# 재준 :  CruxClimbingspot에서 클라이밍장 spotname데이터 GET
-@api_view(['GET'])
-def SpotName(request):
-    test=CruxClimbingspot.objects.spotname
-    serializer = CruxClimbingspotSerializer(test, many=True)
-    return Response(serializer.data)

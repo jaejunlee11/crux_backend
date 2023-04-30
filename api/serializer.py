@@ -28,10 +28,21 @@ class CruxVideoSerializer(serializers.ModelSerializer):
     class Meta:
         model = CruxVideo 
         fields = '__all__'
-    
-        
+
+
+#민재: 게시판(크루/자유), 마이페이지 기능구현용 serializer 생성    
+#ForumPost, ForumReply, CruxUser       
 class ForumPostSerializer(serializers.ModelSerializer):
     class Meta:
         model = ForumPosts
         fields = '__all__'
-      
+
+class ForumRelpySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ForumRelpy
+        fields = '__all__'
+
+class CruxUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CruxUser
+        fields = '__all__'
