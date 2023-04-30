@@ -141,3 +141,61 @@ def postVideo(request):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+# 재준 : 클라이밍장 검색 화면에서 등록된 클라이밍장을 전부 가져오는 함수
+# 재준 :  CruxClimbingspot에서 클라이밍장 spotname데이터 GET
+@api_view(['GET'])
+def SpotName(request):
+    test=CruxClimbingspot.objects.only("spotname")
+    serializer = CruxClimbingspotSerializer(test, many=True)
+    return Response(serializer.data)
+
+
+# 민재: 하단 순서대로 forumpost, forumrelpy, cruxuser GET/POST
+@api_view(['GET'])
+def getForumPost(request):
+    forumPost=ForumPosts.objects.all()
+    serializer = ForumPostSerializer(forumPost, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def postForumPost(request):
+    reqData = request.data
+    serializer = ForumPostSerializer(data=reqData)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+def getForumRelpy(request,id):
+    test=CruxVideo.objects.filter(Replyid=id)
+    serializer = ForumRelpySerializer(test, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def postForumRelpy(request):
+    reqData = request.data
+    serializer = ForumRelpySerializer(data=reqData)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+def getUser(request,id):
+    test=CruxVideo.objects.filter(Memberid=id)
+    serializer = CruxUserSerializer(test, many=True)
+    return Response(serializer.data)
+
+@api_view(['POST'])
+def postUser(request):
+    reqData = request.data
+    serializer = CruxUserSerializer(data=reqData)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

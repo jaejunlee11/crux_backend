@@ -40,28 +40,28 @@ urlpatterns = [
     path('postTest/', postTest, name="postMember"), #for test
     # 재준 : rest API 형식에 맞춰서 url 생성
     # 재준 : CruxClimbingspot
-    path('GET/spot/<int:id>',getSpot),
-    path('POST/spot/',postSpot,name='postSpot'),
+    path('spot/<int:id>',getSpot),
+    path('post-spot',postSpot,name='postSpot'),
     # 재준 : CruxQuestion
-    path('GET/question/<int:id>',getQuestion),
-    path('POST/question/',postQuestion,name='postQuestion'),
+    path('question/<int:id>',getQuestion),
+    path('post-question',postQuestion,name='postQuestion'),
     # 재준 : CruxSector
-    path('GET/sector/<int:id>',getSector),
-    path('POST/sector/',postSector,name='postSector'),
+    path('sector/<int:id>',getSector),
+    path('post-sector',postSector,name='postSector'),
     # 재준 : CruxVideo
-    path('GET/video/<int:id>',getVideo),
-    path('POST/video/',postVideo,name='postVideo'),
+    path('video/<int:id>',getVideo),
+    path('post-video',postVideo,name='postVideo'),
     # 재준 : SpotName가져오기
-    path('GET/spotName/',SpotName),
+    path('spotname',SpotName),
 
     #민재: ForumPost,ForumRelpy,CruxUser
-    path("GET/forumPost/<int:id>",getForumPost),
-    path("POST/forumPost",postForumPost,name='postForumPost'),
+    path("forumpost/<int:id>",getForumPost),
+    path("post-forumpost",postForumPost,name='postForumPost'),
 
-    path("GET/forumReply/<int:id>",getForumRelpy),
-    path("POST/forumReply",postForumRelpy,name='postForumReply'),
+    path("forumreply/<int:id>",getForumRelpy),
+    path("post-forumreply",postForumRelpy,name='postForumReply'),
 
-    path("GET/User/<char:id>",getUser),
-    path("POST/User",postUser,name='postUser'), #필요성?
+    path("user/<str:id>",getUser),
+    path("post-user",postUser,name='postUser'), #필요성?
 ]
 
