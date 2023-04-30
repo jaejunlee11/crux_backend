@@ -147,7 +147,7 @@ def postVideo(request):
 # 재준 :  CruxClimbingspot에서 클라이밍장 spotname데이터 GET
 @api_view(['GET'])
 def SpotName(request):
-    test=CruxClimbingspot.objects.only("spotname")
+    test=CruxClimbingspot.objects.filter(spotid=1).only("spotname")
     serializer = CruxClimbingspotSerializer(test, many=True)
     return Response(serializer.data)
 
@@ -171,7 +171,7 @@ def postForumPost(request):
 
 @api_view(['GET'])
 def getForumRelpy(request,id):
-    test=CruxVideo.objects.filter(Replyid=id)
+    test=ForumRelpy.objects.filter(replyid=id)
     serializer = ForumRelpySerializer(test, many=True)
     return Response(serializer.data)
 
@@ -187,7 +187,7 @@ def postForumRelpy(request):
 
 @api_view(['GET'])
 def getUser(request,id):
-    test=CruxVideo.objects.filter(Memberid=id)
+    test=CruxUser.objects.filter(memberid=id)
     serializer = CruxUserSerializer(test, many=True)
     return Response(serializer.data)
 
