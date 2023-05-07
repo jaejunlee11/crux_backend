@@ -143,14 +143,21 @@ def postVideo(request):
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-# 재준 : 클라이밍장 검색 화면에서 등록된 클라이밍장을 전부 가져오는 함수
+# 재준 : 클라이밍장 검색 화면에서 등록된 클라이밍장의 이름을 전부 가져오는 함수
 # 재준 :  CruxClimbingspot에서 클라이밍장 spotname데이터 GET
 @api_view(['GET'])
 def SpotName(request):
-    test=CruxClimbingspot.objects.filter(spotid=1)
+    test=CruxClimbingspot.objects.all()
     serializer = SpotNameSerializer(test, many=True)
     return Response(serializer.data)
 
+# 재준 : 클라이밍장 검색 화면에서 user과 최근에 검색했던 암장의 리스트를 받아오는 함수
+# 재준 : CruxUser에서 id가 일치하는 user의 memberprofilerecentQue 데이터 GET
+@api_view(['GET'])
+def getRecentSpot(request,id):
+    test=CruxUser.objects.filter(memberid=id)
+    serializer = RecentSpotSerializer   (test, many=True)
+    return Response(serializer.data)
 
 # 민재: 하단 순서대로 forumpost, forumrelpy, cruxuser GET/POST
 @api_view(['GET'])
