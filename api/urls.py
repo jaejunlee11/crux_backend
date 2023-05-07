@@ -53,6 +53,8 @@ urlpatterns = [
     path('post-video',postVideo,name='postVideo'),
     # 재준 : SpotName가져오기
     path('spotname',SpotName),
+    # 재준 : memberprofilerecentque가져오기
+    path('recentspot/<str:id>',getRecentSpot),
 
     #민재: ForumPost,ForumRelpy,CruxUser
     path("forumpost/<int:id>",getForumPost),
