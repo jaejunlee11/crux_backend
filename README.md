@@ -1,12 +1,7 @@
 # crux_backend
 ## crux backend 개발 django 사용
-
-## ER diagram final
-### ![ERDIAGRAMTEST (1)](https://user-images.githubusercontent.com/130541881/232277096-08cf4e96-835f-446b-a9c4-aa787d0fd40c.png)
-
-## 테이블 명세서
-###![명세서_1](https://user-images.githubusercontent.com/130541881/232277995-4135e2c3-8e00-4bb9-b153-d91b7a5cf5ed.PNG)
-###![명세서_2](https://user-images.githubusercontent.com/130541881/232277998-f71b5f6d-d27f-4651-a854-3a0960b8364b.PNG)
+## 구조
+<img width="814" alt="스크린샷 2024-03-31 오전 12 38 45" src="https://github.com/jaejunlee11/crux_backend/assets/72538151/bc6f70c4-acce-4cfd-abbf-99e4324a046f">
 
 # 담당 개발 파트
 ## 재준
@@ -21,4 +16,11 @@
 ### 커뮤니티 게시판 등록, 삭제, 수정, 조회 기능
 ### 커뮤니티 게시판 댓글 등록, 삭제, 수정, 조회, 추천 기능
 ### 마이페이지 수정, 조회 기능
+
+## ER diagram final
+### ![ERDIAGRAMTEST (1)](https://user-images.githubusercontent.com/130541881/232277096-08cf4e96-835f-446b-a9c4-aa787d0fd40c.png)
+
+## 테이블 명세서
+###![명세서_1](https://user-images.githubusercontent.com/130541881/232277995-4135e2c3-8e00-4bb9-b153-d91b7a5cf5ed.PNG)
+###![명세서_2](https://user-images.githubusercontent.com/130541881/232277998-f71b5f6d-d27f-4651-a854-3a0960b8364b.PNG)
 
